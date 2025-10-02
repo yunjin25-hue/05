@@ -4,20 +4,32 @@
 int main(int argc, char *argv[])
 {
     
-//실습 4
+//실습 5
   
-  int x;
-  int i;
-  int sum=0;
+  int x,y;
+  char z;
   
-  printf("input a number : ");
-  scanf("%d",&x);
+  printf("enter the calculation : ");
+  scanf("%d %c %d",&x,&z,&y);
   
-  for(i=0;i<=x;i++)
-   sum=sum+i;              //조건보다 뭘 반복할지를 먼저 생각  
-  
-  printf("sum is %d\n",sum);
+  if(z=='+')
+   printf("%d + %d = %d\n",x,y,x+y);
+  else if(z=='-')
+   printf("%d - %d = %d\n",x,y,x-y);
+  else if(z=='*')
+   printf("%d * %d = %d\n",x,y,x*y);
+  else if(z=='/')
+   printf("%d / %d = %d\n",x,y,x/y);
   
   system("PAUSE");	
   return 0;
 }
+
+/*case 사용 시 
+switch(z)
+{
+  case '+';
+    result=a+b;
+    break;
+  case '-';
+*/
