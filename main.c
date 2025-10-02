@@ -4,22 +4,17 @@
 int main(int argc, char *argv[])
 {
     
-//실습 1 
-  int num;
+//실습 2
   
-  printf("Input an integer : ");
-  scanf("%d",&num);
+  int x;
   
-  if(num>0)
+  printf("input an integer : ");
+  scanf("%d",&x);
   
-      printf("양수입니다.\n"); 
-  
-  else if(num<0)
-  
-      printf("음수입니다.\n"); 
-  else
-  
-      printf("0 입니다.\n"); 
+  if(x>0)
+   printf("absolute is %d",x);
+  else if(x<0)
+   printf("absolute is %d",-x);
   
   system("PAUSE");	
   return 0;
