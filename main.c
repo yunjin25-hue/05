@@ -4,32 +4,33 @@
 int main(int argc, char *argv[])
 {
     
-//실습 5
+//실습 6
   
-  int x,y;
-  char z;
+  int answer = 59;
+  int num;
+  int trial=0;
   
-  printf("enter the calculation : ");
-  scanf("%d %c %d",&x,&z,&y);
+  do
+  {
+      printf("Guess a number : ");
+      scanf("%d",&num);
+      
+      if(answer<num)
+      {
+       printf("high!\n");
+       }
+      else if(answer>num)
+      {
+       printf("low!\n");
+      }
+      trial=trial+1;
+  }
   
-  if(z=='+')
-   printf("%d + %d = %d\n",x,y,x+y);
-  else if(z=='-')
-   printf("%d - %d = %d\n",x,y,x-y);
-  else if(z=='*')
-   printf("%d * %d = %d\n",x,y,x*y);
-  else if(z=='/')
-   printf("%d / %d = %d\n",x,y,x/y);
+  while(answer!=num); //반복 조건  
+  
+  printf("Congratulation! trials : %d\n",trial);
   
   system("PAUSE");	
   return 0;
 }
-
-/*case 사용 시 
-switch(z)
-{
-  case '+';
-    result=a+b;
-    break;
-  case '-';
-*/
+//일단은 해보고 결과가 어떻게 나왔는지 보고 문제점 찾기  
